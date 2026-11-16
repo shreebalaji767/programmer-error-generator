@@ -32,7 +32,7 @@ SCENARIOS = [
         "error": "TypeError: Cannot read properties of undefined (reading 'name')",
         "cause": "You assumed an object existed because your brain said it existed.",
         "fix": "Check whether the object exists before accessing its property.",
-        "excuse": "The object was emotionally unavailable."
+        "excuse": "The API returned undefined, and I refuse to question a system that confident."
     },
     {
         "category": "JavaScript",
@@ -40,7 +40,7 @@ SCENARIOS = [
         "error": "ReferenceError: x is not defined",
         "cause": "The variable was never declared, was misspelled, or lives somewhere you forgot about.",
         "fix": "Declare the variable correctly and check its spelling and scope.",
-        "excuse": "The variable resigned without notice."
+        "excuse": "I renamed it during cleanup and apparently forgot to inform the rest of the codebase."
     },
     {
         "category": "JavaScript",
@@ -48,7 +48,7 @@ SCENARIOS = [
         "error": "SyntaxError: Unexpected token",
         "cause": "JavaScript encountered something that makes absolutely no sense to it.",
         "fix": "Check brackets, commas, quotes, parentheses and the line before the reported error.",
-        "excuse": "JavaScript misunderstood my creative writing."
+        "excuse": "I added one comma and JavaScript took it as a personal challenge."
     },
     {
         "category": "JavaScript",
@@ -56,7 +56,7 @@ SCENARIOS = [
         "error": "undefined",
         "cause": "Something returned nothing when you confidently expected a value.",
         "fix": "Trace the function return value and verify the object or property exists.",
-        "excuse": "The value is taking a personal day."
+        "excuse": "The function returned nothing because the return statement is currently on a journey."
     },
     {
         "category": "JavaScript",
@@ -64,7 +64,7 @@ SCENARIOS = [
         "error": "Promise { <pending> }",
         "cause": "A promise was created but never resolved or rejected.",
         "fix": "Check asynchronous control flow and make sure every code path settles the promise.",
-        "excuse": "The promise is still thinking about it."
+        "excuse": "The promise is pending because the service is waiting for approval from a manager who left in 2022."
     },
     {
         "category": "JavaScript",
@@ -72,7 +72,7 @@ SCENARIOS = [
         "error": "TypeError: Failed to fetch",
         "cause": "The browser could not complete the network request.",
         "fix": "Check the URL, server, HTTPS, CORS, network connection and browser console.",
-        "excuse": "The internet is temporarily unavailable due to technical reasons."
+        "excuse": "The request timed out; the server is either busy or has discovered work-life balance."
     },
     {
         "category": "JavaScript",
@@ -80,7 +80,7 @@ SCENARIOS = [
         "error": "SyntaxError: Unexpected token < in JSON",
         "cause": "You expected JSON but the server probably returned HTML.",
         "fix": "Inspect the actual response before calling response.json().",
-        "excuse": "The API decided HTML would be more artistic."
+        "excuse": "The endpoint sent back an HTML error page wearing a JSON name tag."
     },
     {
         "category": "JavaScript",
@@ -88,7 +88,7 @@ SCENARIOS = [
         "error": "click event fired: false",
         "cause": "The selector may be wrong, the element may not exist yet, or the listener may be attached to the wrong element.",
         "fix": "Verify the selector and attach the event listener after the DOM exists.",
-        "excuse": "The button is currently ignoring me."
+        "excuse": "The click handler is attached, but the button and I have agreed to keep things professional."
     },
     {
         "category": "JavaScript",
@@ -96,7 +96,7 @@ SCENARIOS = [
         "error": "Browser tab has stopped responding",
         "cause": "A loop never reaches its exit condition.",
         "fix": "Check the loop condition and make sure the controlling value changes.",
-        "excuse": "I was testing infinite scalability."
+        "excuse": "The loop was meant to run once. It has since developed a long-term vision."
     },
     {
         "category": "JavaScript",
@@ -104,7 +104,7 @@ SCENARIOS = [
         "error": "NaN",
         "cause": "A calculation received a value that cannot be converted into a valid number.",
         "fix": "Inspect the input values and validate them before calculating.",
-        "excuse": "The number has entered a philosophical state."
+        "excuse": "The input was not a number; it was a number-shaped suggestion."
     },
     {
         "category": "JavaScript",
@@ -112,7 +112,7 @@ SCENARIOS = [
         "error": "TypeError: Cannot read properties of null",
         "cause": "The code tried to access something from null.",
         "fix": "Check the value before accessing properties or methods.",
-        "excuse": "Null was there five minutes ago."
+        "excuse": "The value became null between two perfectly innocent lines. We are investigating internally."
     },
     {
         "category": "JavaScript",
@@ -120,7 +120,7 @@ SCENARIOS = [
         "error": "TypeError: array.map is not a function",
         "cause": "The variable is not actually an array.",
         "fix": "Inspect the value with Array.isArray() and verify the data structure.",
-        "excuse": "It looked like an array from a distance."
+        "excuse": "The API said this was an array. I did not verify the paperwork."
     },
 
     # ========================================================
@@ -133,7 +133,7 @@ SCENARIOS = [
         "error": "IndentationError: unexpected indent",
         "cause": "Python found indentation that does not match the expected structure.",
         "fix": "Check spaces, tabs and block indentation.",
-        "excuse": "Python is extremely passionate about whitespace."
+        "excuse": "Python detected one extra space and escalated it directly to senior management."
     },
     {
         "category": "Python",
@@ -141,7 +141,7 @@ SCENARIOS = [
         "error": "NameError: name 'variable' is not defined",
         "cause": "The variable does not exist in the current scope.",
         "fix": "Check spelling, declaration order and variable scope.",
-        "excuse": "The variable entered witness protection."
+        "excuse": "The variable exists in my notes, which is apparently not a supported runtime environment."
     },
     {
         "category": "Python",
@@ -149,7 +149,7 @@ SCENARIOS = [
         "error": "ModuleNotFoundError: No module named 'something'",
         "cause": "The package is not installed in the active Python environment.",
         "fix": "Activate the correct environment and install the required package.",
-        "excuse": "The module was installed on another computer."
+        "excuse": "I installed the package in the other virtual environment. They are not on speaking terms."
     },
     {
         "category": "Python",
@@ -157,7 +157,7 @@ SCENARIOS = [
         "error": "KeyError: 'username'",
         "cause": "A dictionary key was requested that does not exist.",
         "fix": "Check the dictionary contents or use get() when appropriate.",
-        "excuse": "The key exists spiritually."
+        "excuse": "The key is present in the sample data, which is currently unavailable for comment."
     },
     {
         "category": "Python",
@@ -165,7 +165,7 @@ SCENARIOS = [
         "error": "IndexError: list index out of range",
         "cause": "You requested an index that does not exist in the list.",
         "fix": "Check the list length and valid index range.",
-        "excuse": "The list was longer in development."
+        "excuse": "The list had more items yesterday. Nobody has signed the change log."
     },
     {
         "category": "Python",
@@ -173,7 +173,7 @@ SCENARIOS = [
         "error": "AttributeError: object has no attribute",
         "cause": "The object does not have the property or method you attempted to use.",
         "fix": "Inspect the object's type and available attributes.",
-        "excuse": "The object forgot its own API."
+        "excuse": "The object has the method in the documentation, just not in this particular reality."
     },
     {
         "category": "Python",
@@ -181,7 +181,7 @@ SCENARIOS = [
         "error": "ValueError: invalid literal for int()",
         "cause": "Python received a value of the wrong format.",
         "fix": "Validate or convert the input before using it.",
-        "excuse": "The number looked numeric."
+        "excuse": "The input looked like an integer after a quick glance and under poor lighting."
     },
     {
         "category": "Python",
@@ -189,7 +189,7 @@ SCENARIOS = [
         "error": "Requirement already satisfied... but Python cannot import it",
         "cause": "pip and Python are using different environments.",
         "fix": "Use the correct virtual environment and check which Python and pip are active.",
-        "excuse": "The package is installed. Just not here."
+        "excuse": "pip installed it successfully; Python and pip are simply working from different offices."
     },
     {
         "category": "Python",
@@ -197,7 +197,7 @@ SCENARIOS = [
         "error": "ImportError: cannot import name",
         "cause": "Two modules depend on each other during initialization.",
         "fix": "Refactor shared code into a separate module or change the import structure.",
-        "excuse": "The modules became too dependent on each other."
+        "excuse": "The imports formed a dependency circle and now nobody can leave the meeting."
     },
 
     # ========================================================
@@ -210,7 +210,7 @@ SCENARIOS = [
         "error": "Page looks fine on desktop and terrible on phone",
         "cause": "The viewport configuration or responsive CSS is missing.",
         "fix": "Use a viewport meta tag and responsive layouts with flexible dimensions.",
-        "excuse": "Desktop was the original target audience."
+        "excuse": "The layout was approved on desktop; mobile was apparently not invited to the review."
     },
     {
         "category": "HTML",
@@ -218,7 +218,7 @@ SCENARIOS = [
         "error": "document.getElementById(...) returned null",
         "cause": "The JavaScript ID does not match the HTML ID.",
         "fix": "Compare the HTML id attribute with the JavaScript selector character by character.",
-        "excuse": "Capitalization is a matter of personal preference."
+        "excuse": "The ID differs by one capital letter. The browser has declined to interpret intent."
     },
     {
         "category": "HTML",
@@ -226,7 +226,7 @@ SCENARIOS = [
         "error": "Page unexpectedly refreshed after submit",
         "cause": "The form's default submit behavior was not prevented.",
         "fix": "Use event.preventDefault() when handling the form with JavaScript.",
-        "excuse": "The browser wanted to refresh its memory."
+        "excuse": "The form submitted successfully, including the part where it reloaded the entire page."
     },
     {
         "category": "HTML",
@@ -234,7 +234,7 @@ SCENARIOS = [
         "error": "Unexpected layout behavior",
         "cause": "An HTML element was opened but not correctly closed.",
         "fix": "Validate the HTML and check nested elements.",
-        "excuse": "The closing tag is coming in the next sprint."
+        "excuse": "The closing tag was delayed by an unresolved scheduling conflict."
     },
 
     # ========================================================
@@ -247,7 +247,7 @@ SCENARIOS = [
         "error": "Website is wider than the screen",
         "cause": "An element is overflowing the viewport.",
         "fix": "Inspect fixed widths, margins, transforms, grids and overflowing content.",
-        "excuse": "The website needs room to breathe."
+        "excuse": "One element is wider than the screen because it has refused to compromise."
     },
     {
         "category": "CSS",
@@ -255,7 +255,7 @@ SCENARIOS = [
         "error": "z-index: 9999999 still does nothing",
         "cause": "The stacking context is more complicated than the number suggests.",
         "fix": "Inspect positioning and stacking contexts instead of increasing z-index forever.",
-        "excuse": "We have entered the final boss of CSS."
+        "excuse": "The cascade has cascaded beyond the agreed scope."
     },
     {
         "category": "CSS",
@@ -263,7 +263,7 @@ SCENARIOS = [
         "error": "justify-content: center but nothing is centered",
         "cause": "The parent dimensions or flex direction are not what you expected.",
         "fix": "Inspect the parent container and verify display:flex, width, height and direction.",
-        "excuse": "Centering is apparently subjective."
+        "excuse": "The element is centered relative to a coordinate system known only to itself."
     },
     {
         "category": "CSS",
@@ -271,7 +271,7 @@ SCENARIOS = [
         "error": "Everything overlaps below 768px",
         "cause": "Desktop dimensions were used without responsive breakpoints.",
         "fix": "Use flexible units, wrapping, media queries and mobile-first layouts.",
-        "excuse": "Phones were not part of the original requirements."
+        "excuse": "The layout works on my monitor, which has now been listed as a project dependency."
     },
     {
         "category": "CSS",
@@ -279,7 +279,7 @@ SCENARIOS = [
         "error": "Button text escapes the button",
         "cause": "The button has fixed dimensions or text that cannot wrap.",
         "fix": "Allow flexible width, wrapping and adequate padding.",
-        "excuse": "The button has big ambitions."
+        "excuse": "The button is technically present, but its hitbox has gone freelance."
     },
     {
         "category": "CSS",
@@ -287,7 +287,7 @@ SCENARIOS = [
         "error": "Changing one font broke the entire layout",
         "cause": "The new font has different metrics and dimensions.",
         "fix": "Review line-height, font size, wrapping and container dimensions.",
-        "excuse": "Typography is infrastructure."
+        "excuse": "The font loaded correctly on my machine and is now unavailable for external engagements."
     },
 
     # ========================================================
@@ -300,7 +300,7 @@ SCENARIOS = [
         "error": "You are in 'detached HEAD' state",
         "cause": "Git checked out a commit instead of a normal branch.",
         "fix": "Create or switch to a branch if you need to continue development.",
-        "excuse": "HEAD has temporarily chosen independence."
+        "excuse": "HEAD detached itself to get some perspective. Unfortunately, Git took it literally."
     },
     {
         "category": "Git",
@@ -308,7 +308,7 @@ SCENARIOS = [
         "error": "CONFLICT (content): Merge conflict",
         "cause": "Two changes modified overlapping parts of the same files.",
         "fix": "Open the conflicted files, resolve the markers, stage and commit the resolution.",
-        "excuse": "Git is teaching us teamwork."
+        "excuse": "Git found a conflict between two versions of my confidence."
     },
     {
         "category": "Git",
@@ -316,7 +316,7 @@ SCENARIOS = [
         "error": "Updates were rejected because the remote contains work",
         "cause": "The remote branch has commits that your local branch does not have.",
         "fix": "Fetch/pull the remote changes, resolve conflicts if necessary, then push again.",
-        "excuse": "Git doesn't trust me anymore."
+        "excuse": "I committed the wrong files because the staging area and I had different plans."
     },
     {
         "category": "Git",
@@ -324,7 +324,7 @@ SCENARIOS = [
         "error": "Commit landed on main",
         "cause": "You forgot to check which branch was active.",
         "fix": "Check git branch before making important changes.",
-        "excuse": "Main looked exactly like my feature branch."
+        "excuse": "I pushed to the branch that looked most like main. This is not a recognized strategy."
     },
     {
         "category": "Git",
@@ -332,7 +332,7 @@ SCENARIOS = [
         "error": "API key detected in Git history",
         "cause": "A secret was accidentally committed.",
         "fix": "Revoke the exposed credential immediately and remove it from the repository history as appropriate.",
-        "excuse": "It was only a tiny API key."
+        "excuse": "The secret was only temporary, but the internet has a very long memory."
     },
     {
         "category": "Git",
@@ -340,7 +340,7 @@ SCENARIOS = [
         "error": "Where did my changes go?",
         "cause": "The work exists locally but was never committed or pushed.",
         "fix": "Check git status and commit the intended changes.",
-        "excuse": "The code was committed emotionally."
+        "excuse": "The commit message says 'quick fix'. The diff disagrees."
     },
 
     # ========================================================
@@ -353,7 +353,7 @@ SCENARIOS = [
         "error": "Error: listen EADDRINUSE",
         "cause": "Another process is already using the requested port.",
         "fix": "Find and stop the process or configure the application to use another port.",
-        "excuse": "Port 3000 has prior commitments."
+        "excuse": "Port 3000 is occupied by a process that refuses to identify itself."
     },
     {
         "category": "Node.js",
@@ -361,7 +361,7 @@ SCENARIOS = [
         "error": "SyntaxError: Cannot use import statement outside a module",
         "cause": "The project configuration does not match the module syntax being used.",
         "fix": "Configure ESM/CommonJS consistently and check package.json settings.",
-        "excuse": "JavaScript has two personalities."
+        "excuse": "One equals sign was promoted to two, and now the condition has changed its entire personality."
     },
     {
         "category": "Node.js",
@@ -369,7 +369,7 @@ SCENARIOS = [
         "error": "Cannot find module",
         "cause": "Dependencies have not been installed in the current environment.",
         "fix": "Run npm install or npm ci using the project's package configuration.",
-        "excuse": "node_modules escaped to save disk space."
+        "excuse": "node_modules has become larger than the project and is negotiating rent."
     },
 
     # ========================================================
@@ -382,7 +382,7 @@ SCENARIOS = [
         "error": "HTTP 400 Bad Request",
         "cause": "The server could not understand the request.",
         "fix": "Check request syntax, parameters, headers and body data.",
-        "excuse": "The server didn't understand my handwriting."
+        "excuse": "The server received the request but appears to have misplaced the instructions."
     },
     {
         "category": "HTTP",
@@ -390,7 +390,7 @@ SCENARIOS = [
         "error": "HTTP 401 Unauthorized",
         "cause": "Authentication credentials are missing or invalid.",
         "fix": "Check login credentials, tokens, sessions and Authorization headers.",
-        "excuse": "The server wants to see some identification."
+        "excuse": "The server requires authentication; apparently my confidence is not a credential."
     },
     {
         "category": "HTTP",
@@ -398,7 +398,7 @@ SCENARIOS = [
         "error": "HTTP 403 Forbidden",
         "cause": "The server understood the request but refuses access.",
         "fix": "Check permissions, authentication state and server authorization rules.",
-        "excuse": "The server said no."
+        "excuse": "The server returned 500 because something went wrong somewhere with impressive commitment."
     },
     {
         "category": "HTTP",
@@ -406,7 +406,7 @@ SCENARIOS = [
         "error": "HTTP 404 Not Found",
         "cause": "The requested resource or route could not be found.",
         "fix": "Check the URL, route configuration, filename and deployment structure.",
-        "excuse": "The page moved without leaving a forwarding address."
+        "excuse": "The route moved, but the old URL has not updated its forwarding address."
     },
     {
         "category": "HTTP",
@@ -414,7 +414,7 @@ SCENARIOS = [
         "error": "HTTP 429 Too Many Requests",
         "cause": "The server or API rate limit was exceeded.",
         "fix": "Reduce request frequency and implement appropriate retry/backoff behavior.",
-        "excuse": "I was just making sure the API was still alive."
+        "excuse": "I checked the endpoint manually so many times it may have started rate-limiting my optimism."
     },
     {
         "category": "HTTP",
@@ -422,7 +422,7 @@ SCENARIOS = [
         "error": "HTTP 500 Internal Server Error",
         "cause": "The server encountered an unexpected condition.",
         "fix": "Check server logs and reproduce the failing request.",
-        "excuse": "The server is having a character-building experience."
+        "excuse": "The server is alive, but its application is not participating in today's activities."
     },
     {
         "category": "HTTP",
@@ -430,7 +430,7 @@ SCENARIOS = [
         "error": "HTTP 502 Bad Gateway",
         "cause": "A gateway or proxy received an invalid response from an upstream server.",
         "fix": "Check the upstream service, proxy configuration and network connectivity.",
-        "excuse": "The gateway misunderstood the upstream server."
+        "excuse": "The gateway and upstream server are giving conflicting accounts of the incident."
     },
     {
         "category": "HTTP",
@@ -438,7 +438,7 @@ SCENARIOS = [
         "error": "HTTP 503 Service Unavailable",
         "cause": "The service is temporarily unable to handle the request.",
         "fix": "Check service health, deployments, capacity and dependencies.",
-        "excuse": "The server is on a coffee break."
+        "excuse": "The server is reachable; the service behind it is currently unavailable for questioning."
     },
 
     # ========================================================
@@ -451,7 +451,7 @@ SCENARIOS = [
         "error": "Access to fetch has been blocked by CORS policy",
         "cause": "The server does not allow the browser's cross-origin request.",
         "fix": "Configure appropriate CORS headers on the server and avoid unsafe wildcard configurations.",
-        "excuse": "The browser has trust issues."
+        "excuse": "The browser blocked the request because the security rules were followed more carefully than expected."
     },
     {
         "category": "Web Security",
@@ -459,7 +459,7 @@ SCENARIOS = [
         "error": "Response to preflight request doesn't pass access control check",
         "cause": "The OPTIONS request or required CORS headers are not configured correctly.",
         "fix": "Check allowed origins, methods and headers on the server.",
-        "excuse": "The browser wanted to ask permission first."
+        "excuse": "The browser asked for permission. The permission prompt was not invited to the design."
     },
     {
         "category": "Web Security",
@@ -467,7 +467,7 @@ SCENARIOS = [
         "error": "User-controlled HTML executed in the browser",
         "cause": "Untrusted input was inserted into a page without appropriate output encoding or sanitization.",
         "fix": "Treat user input as untrusted and use safe DOM APIs, output encoding and appropriate security controls.",
-        "excuse": "The HTML was feeling expressive."
+        "excuse": "The markup is valid enough to render, but not valid enough to explain itself."
     },
     {
         "category": "Web Security",
@@ -475,7 +475,7 @@ SCENARIOS = [
         "error": "Database query contains unsanitized user input",
         "cause": "Application input was directly incorporated into SQL.",
         "fix": "Use parameterized queries or prepared statements.",
-        "excuse": "The database was supposed to be friendly."
+        "excuse": "The database connection string is correct except for the part that matters."
     },
     {
         "category": "Web Security",
@@ -483,7 +483,7 @@ SCENARIOS = [
         "error": "Secret API key visible in browser source",
         "cause": "A secret credential was included in client-side code.",
         "fix": "Move secrets to server-side configuration and rotate any exposed credential.",
-        "excuse": "The frontend promised not to tell anyone."
+        "excuse": "The frontend sent the right data to the wrong endpoint with excellent timing."
     },
 
     # ========================================================
@@ -496,7 +496,7 @@ SCENARIOS = [
         "error": "SQL syntax error near 'FROM'",
         "cause": "The SQL statement contains invalid syntax.",
         "fix": "Inspect the generated SQL and verify keywords, commas, quotes and clauses.",
-        "excuse": "SQL grammar is optional according to my development methodology."
+        "excuse": "The SQL parser expected a comma. I supplied confidence instead."
     },
     {
         "category": "Database",
@@ -504,7 +504,7 @@ SCENARIOS = [
         "error": "Duplicate entry violates unique constraint",
         "cause": "A value that must be unique already exists.",
         "fix": "Check existing records and decide whether to update, ignore or generate a different value.",
-        "excuse": "The database liked the first one so much it wanted another."
+        "excuse": "The database already has that record; apparently it remembers things I don't."
     },
     {
         "category": "Database",
@@ -512,7 +512,7 @@ SCENARIOS = [
         "error": "Foreign key constraint fails",
         "cause": "A referenced record does not exist or the relationship is invalid.",
         "fix": "Verify parent records and insertion/deletion order.",
-        "excuse": "The database is enforcing friendship requirements."
+        "excuse": "The foreign key is enforcing boundaries more consistently than the team."
     },
     {
         "category": "Database",
@@ -520,7 +520,7 @@ SCENARIOS = [
         "error": "1 request generated 500 database queries",
         "cause": "Related data is being loaded individually instead of efficiently.",
         "fix": "Use appropriate joins, eager loading or batched queries.",
-        "excuse": "I was stress-testing the database."
+        "excuse": "I ran the migration twice to make absolutely sure it happened once."
     },
     {
         "category": "Database",
@@ -528,7 +528,7 @@ SCENARIOS = [
         "error": "Database connection refused",
         "cause": "The database server is unavailable or the connection settings are wrong.",
         "fix": "Check host, port, credentials, service status and network configuration.",
-        "excuse": "The database is pretending not to be home."
+        "excuse": "The database is online, but this query has not been granted an audience."
     },
 
     # ========================================================
@@ -541,7 +541,7 @@ SCENARIOS = [
         "error": "Application works locally but fails in production",
         "cause": "The production environment differs from the development environment.",
         "fix": "Compare runtime versions, dependencies, environment variables, paths and configuration.",
-        "excuse": "Works on my machine."
+        "excuse": "It works on my machine because my machine has undocumented local conditions."
     },
     {
         "category": "Deployment",
@@ -549,7 +549,7 @@ SCENARIOS = [
         "error": "KeyError: DATABASE_URL",
         "cause": "A required environment variable is missing from the deployment environment.",
         "fix": "Configure the required environment variable securely in the hosting platform.",
-        "excuse": "The environment forgot its variables."
+        "excuse": "The environment variable is set in a terminal window that has since been closed."
     },
     {
         "category": "Deployment",
@@ -557,7 +557,7 @@ SCENARIOS = [
         "error": "Application failed to start",
         "cause": "The hosting platform is executing the wrong command.",
         "fix": "Check the deployment start command and application entry point.",
-        "excuse": "The server started the wrong application."
+        "excuse": "The server started, just not the application we were discussing."
     },
     {
         "category": "Deployment",
@@ -565,7 +565,7 @@ SCENARIOS = [
         "error": "404: index.html not found",
         "cause": "The static host cannot find the expected published file.",
         "fix": "Check the build command and publish directory.",
-        "excuse": "index.html is taking the day off."
+        "excuse": "The browser requested index.html. The deployment supplied a philosophical question."
     },
     {
         "category": "Deployment",
@@ -573,7 +573,7 @@ SCENARIOS = [
         "error": "File not found in production",
         "cause": "The development machine may use a case-insensitive filesystem while production does not.",
         "fix": "Make filename and import casing match exactly.",
-        "excuse": "The file name was technically correct."
+        "excuse": "The filename differs by one character, which is enough to start a small incident."
     },
 
     # ========================================================
@@ -586,7 +586,7 @@ SCENARIOS = [
         "error": "bash: ./script.sh: Permission denied",
         "cause": "The file does not have executable permission.",
         "fix": "Check file permissions and grant execute permission when appropriate.",
-        "excuse": "Linux respects boundaries."
+        "excuse": "The file permissions are correct for a user who is not me."
     },
     {
         "category": "Linux",
@@ -594,7 +594,7 @@ SCENARIOS = [
         "error": "bash: command: command not found",
         "cause": "The command is not installed or is not available in PATH.",
         "fix": "Check installation and PATH configuration.",
-        "excuse": "The command is hiding from PATH."
+        "excuse": "The executable is installed; PATH has not received the announcement."
     },
     {
         "category": "Linux",
@@ -602,7 +602,7 @@ SCENARIOS = [
         "error": "No such file or directory",
         "cause": "The command was executed from a directory where the expected file does not exist.",
         "fix": "Run pwd and ls, then navigate to the correct directory.",
-        "excuse": "The terminal moved the folder while I wasn't looking."
+        "excuse": "The terminal is in the parent directory, and the parent is not taking responsibility."
     },
 
     # ========================================================
@@ -615,7 +615,7 @@ SCENARIOS = [
         "error": "Container exited with code 1",
         "cause": "The main process inside the container terminated.",
         "fix": "Inspect container logs and verify the entry command.",
-        "excuse": "The container finished its work extremely efficiently."
+        "excuse": "The container exited cleanly before the application had a chance to start."
     },
     {
         "category": "Docker",
@@ -623,7 +623,7 @@ SCENARIOS = [
         "error": "Connection refused to localhost",
         "cause": "localhost inside a container refers to that container, not your host machine.",
         "fix": "Use the appropriate container/network hostname and expose services correctly.",
-        "excuse": "Localhost has different definitions depending on its mood."
+        "excuse": "Localhost resolves correctly, just not to the service I intended."
     },
     {
         "category": "Docker",
@@ -631,7 +631,7 @@ SCENARIOS = [
         "error": "failed to solve: process did not complete successfully",
         "cause": "A Dockerfile command failed during image creation.",
         "fix": "Read the failing build step and verify files, commands and dependencies.",
-        "excuse": "Dockerfile syntax is an ancient language."
+        "excuse": "The Dockerfile is valid YAML-adjacent optimism, but Docker expects instructions."
     },
 
     # ========================================================
@@ -644,7 +644,7 @@ SCENARIOS = [
         "error": "connect ECONNREFUSED 127.0.0.1:3000",
         "cause": "Nothing is accepting connections on the requested address and port.",
         "fix": "Check whether the server is running and listening on the expected interface and port.",
-        "excuse": "The server refused to answer the door."
+        "excuse": "The port is open, but nothing is listening with any enthusiasm."
     },
     {
         "category": "Networking",
@@ -652,7 +652,7 @@ SCENARIOS = [
         "error": "DNS_PROBE_FINISHED_NXDOMAIN",
         "cause": "DNS could not find the requested domain.",
         "fix": "Check the domain name and DNS configuration.",
-        "excuse": "DNS has never heard of that website."
+        "excuse": "DNS has the correct domain in its records, just not in its current plans."
     },
     {
         "category": "Networking",
@@ -660,7 +660,7 @@ SCENARIOS = [
         "error": "ETIMEDOUT",
         "cause": "The connection did not complete within the configured timeout.",
         "fix": "Check network connectivity, server availability and timeout settings.",
-        "excuse": "The request is almost there."
+        "excuse": "The request is still travelling through a network path with several unexplained detours."
     },
 
     # ========================================================
@@ -673,7 +673,7 @@ SCENARIOS = [
         "error": "Test passed locally. Failed in CI. Passed again.",
         "cause": "The test depends on timing, external state, randomness or another unstable factor.",
         "fix": "Make the test deterministic and isolate external dependencies.",
-        "excuse": "The test has free will."
+        "excuse": "The test failed because the expected value and actual value have stopped communicating."
     },
     {
         "category": "Testing",
@@ -681,7 +681,7 @@ SCENARIOS = [
         "error": "127 tests failed",
         "cause": "A shared dependency, fixture, configuration or setup step is broken.",
         "fix": "Find the earliest meaningful failure rather than fixing every downstream error.",
-        "excuse": "The tests decided to form a union."
+        "excuse": "The tests are flaky; they pass whenever nobody important is watching."
     },
     {
         "category": "Testing",
@@ -689,7 +689,7 @@ SCENARIOS = [
         "error": "Test passed but nobody knows why",
         "cause": "The test may not actually assert the intended behavior.",
         "fix": "Review assertions and verify that the test fails when the feature is intentionally broken.",
-        "excuse": "A passing test is a passing test."
+        "excuse": "The test passed locally, then failed in CI with a different interpretation of reality."
     },
 
     # ========================================================
@@ -702,7 +702,7 @@ SCENARIOS = [
         "error": "Page load: 14.8 seconds",
         "cause": "Large assets, slow APIs, excessive JavaScript, database queries or rendering work may be involved.",
         "fix": "Profile the application and optimize the actual bottleneck.",
-        "excuse": "Premium loading experience."
+        "excuse": "The page loads slowly because the bundle has brought its entire extended family."
     },
     {
         "category": "Performance",
@@ -710,7 +710,7 @@ SCENARIOS = [
         "error": "main.js: 18.7 MB",
         "cause": "Too many dependencies or unoptimized application code are shipped to the browser.",
         "fix": "Use code splitting, tree shaking, compression and dependency review.",
-        "excuse": "The bundle contains important vibes."
+        "excuse": "The bundle is large because every dependency insisted on bringing a plus-one."
     },
     {
         "category": "Performance",
@@ -718,7 +718,7 @@ SCENARIOS = [
         "error": "Memory usage increases continuously",
         "cause": "Objects, listeners, timers or resources remain referenced after they should be released.",
         "fix": "Profile memory usage and remove unnecessary retained references.",
-        "excuse": "The application is collecting memories."
+        "excuse": "The application is not frozen; it is processing a very complicated thought."
     },
 
     # ========================================================
@@ -731,7 +731,7 @@ SCENARIOS = [
         "error": "Added console.log and suddenly it works",
         "cause": "Timing, initialization order or another hidden state change may have altered behavior.",
         "fix": "Understand why the logging changed behavior before removing it.",
-        "excuse": "I don't know why, but I'm afraid to touch it."
+        "excuse": "The bug is reproducible, except during the exact moments we try to reproduce it."
     },
     {
         "category": "Programmer Life",
@@ -739,7 +739,7 @@ SCENARIOS = [
         "error": "Changed one line. Entire application exploded.",
         "cause": "The changed line affected an important dependency or assumption.",
         "fix": "Use version control and trace the dependency chain to find the actual failure.",
-        "excuse": "That line had too much responsibility."
+        "excuse": "The line worked yesterday. Today it has requested a written specification."
     },
     {
         "category": "Programmer Life",
@@ -747,7 +747,7 @@ SCENARIOS = [
         "error": "Production error detected Friday at 5:59 PM",
         "cause": "A deployment was made immediately before the weekend.",
         "fix": "Follow deployment procedures, testing and rollback practices.",
-        "excuse": "It was supposed to be a small change."
+        "excuse": "The change was small in the editor and enormous in the dependency graph."
     },
     {
         "category": "Programmer Life",
@@ -755,7 +755,7 @@ SCENARIOS = [
         "error": "TODO: remove this workaround",
         "cause": "A temporary workaround survived long enough to become part of the system.",
         "fix": "Track technical debt and schedule the cleanup.",
-        "excuse": "Temporary is a flexible concept."
+        "excuse": "The temporary workaround has completed its probation and become permanent."
     },
     {
         "category": "Programmer Life",
@@ -763,7 +763,7 @@ SCENARIOS = [
         "error": "Same code. Different result.",
         "cause": "Dependencies, environment, data or external services changed.",
         "fix": "Compare environment and dependency versions and inspect recent changes.",
-        "excuse": "Yesterday's computer was better."
+        "excuse": "The environment was stable until we described it as stable."
     },
     {
         "category": "Programmer Life",
@@ -771,7 +771,7 @@ SCENARIOS = [
         "error": "Cannot reproduce locally",
         "cause": "Production has different data, configuration, traffic or environment conditions.",
         "fix": "Collect production-safe diagnostics and reproduce the relevant conditions.",
-        "excuse": "The bug only respects important environments."
+        "excuse": "The bug appears only in production, where it has an audience and stage lighting."
     },
     {
         "category": "Programmer Life",
@@ -779,7 +779,7 @@ SCENARIOS = [
         "error": "Two unrelated functions contain exactly the same suspicious line",
         "cause": "Code was copied without fully adapting it to the new context.",
         "fix": "Review copied code and extract reusable logic where appropriate.",
-        "excuse": "Ctrl+C/Ctrl+V is an established architecture."
+        "excuse": "The fix works in staging, which is a lovely place with very different laws of physics."
     },
     {
         "category": "Programmer Life",
@@ -787,7 +787,7 @@ SCENARIOS = [
         "error": "Everything failed because of one comma",
         "cause": "A small syntax error prevented parsing or changed the structure of the code.",
         "fix": "Use syntax-aware editors, formatters and linters.",
-        "excuse": "The comma was optional in my imagination."
+        "excuse": "The copy-paste was intentional; the missing variable was not part of the design."
     },
     {
         "category": "Programmer Life",
@@ -795,7 +795,7 @@ SCENARIOS = [
         "error": "The fix doesn't work",
         "cause": "The edited file was never saved.",
         "fix": "Save the file and verify the running application is using the latest version.",
-        "excuse": "I fixed it locally in my unsaved universe."
+        "excuse": "The parser expected a comma, and I provided a semicolon with strong conviction."
     },
     {
         "category": "Programmer Life",
@@ -803,7 +803,7 @@ SCENARIOS = [
         "error": "Nothing changed",
         "cause": "You edited a duplicate or similarly named file.",
         "fix": "Verify the actual file loaded by the application.",
-        "excuse": "There were too many files with the same name."
+        "excuse": "I fixed the source file, but the browser is still serving yesterday's cached version."
     },
     {
         "category": "Programmer Life",
@@ -811,7 +811,7 @@ SCENARIOS = [
         "error": "Old version still appears after deployment",
         "cause": "Browser, CDN or application caching is serving an older resource.",
         "fix": "Inspect cache headers and invalidate caches when appropriate.",
-        "excuse": "The browser remembers better than I do."
+        "excuse": "Two files share a name; the build system picked the one I was not looking at."
     },
     {
         "category": "Programmer Life",
@@ -819,7 +819,7 @@ SCENARIOS = [
         "error": "Bug disappeared while explaining it",
         "cause": "Explaining the problem exposed an incorrect assumption.",
         "fix": "Explain the code step by step or reproduce the issue in a minimal example.",
-        "excuse": "The duck understood immediately."
+        "excuse": "The browser cache has preserved the old bug as a historical artifact."
     },
 ]
 
