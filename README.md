@@ -366,3 +366,19 @@ index.html
    │
    ▼
 Static Website
+
+
+---
+
+## GitHub Pages deployment
+
+This repository keeps `build.py` as the source for the complete generator. GitHub Actions runs it and publishes the generated `index.html` as a static site. Visitors only receive HTML, CSS, JavaScript, and scenario data; Python is used only during the build and is not required by the hosted website.
+
+1. Open **Settings → Pages** in the repository.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Push changes to `main`, or run **Build and deploy static site** from the Actions tab.
+4. After the workflow succeeds, open the Pages URL shown in the deployment job.
+
+To build locally, run `python build.py` and open the generated `index.html` in a browser. No package installation or server is required.
+
+The deployment workflow verifies that the generated page exists before publishing. The original scenario database and generator source remain in `build.py`; this deployment change does not replace or remove them.
