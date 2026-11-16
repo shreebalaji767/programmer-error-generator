@@ -3,6 +3,8 @@ name: Build and deploy static site
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "README.md"
   workflow_dispatch:
 
 permissions:
@@ -26,13 +28,56 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate static website
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build the static website with Python
         run: |
+          python -m py_compile build.py
           python build.py
           test -s index.html
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+
+          page = Path("index.html").read_text(encoding="utf-8")
+          required = [
+              "<!DOCTYPE html>",
+              "<title>",
+              "Programmer Error Generator",
+              'id="searchInput"',
+              'id="generateButton"',
+              "const SCENARIOS =",
+          ]
+          missing = [item for item in required if item not in page]
+          if missing:
+              raise SystemExit("Generated page is missing required app content: " + ", ".join(missing))
+          if "__SCENARIOS__" in page:
+              raise SystemExit("Scenario placeholder was not replaced.")
+          if "# 🧑‍💻 Programmer Error Generator" in page or "## GitHub Pages deployment" in page:
+              raise SystemExit("README documentation was accidentally included in the website.")
+
+          class PageCheck(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.html = False
+                  self.body = False
+                  self.script = False
+              def handle_starttag(self, tag, attrs):
+                  if tag == "html": self.html = True
+                  if tag == "body": self.body = True
+                  if tag == "script": self.script = True
+
+          check = PageCheck()
+          check.feed(page)
+          if not (check.html and check.body and check.script):
+              raise SystemExit("Generated HTML is incomplete.")
+          print(f"Static page verified: {len(page):,} bytes")
+          PY
           mkdir -p dist
-          mv index.html dist/index.html
+          cp index.html dist/index.html
           touch dist/.nojekyll
+          test -s dist/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -46,6 +91,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy static website to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
