@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths-ignore:
       - "README.md"
+      - "index.html"
+      - ".nojekyll"
   workflow_dispatch:
 
 permissions:
@@ -78,6 +80,12 @@ jobs:
           cp index.html dist/index.html
           touch dist/.nojekyll
           test -s dist/index.html
+
+      - name: Export generated page for root publishing
+        run: |
+          printf "GENERATED_INDEX_BASE64="
+          base64 -w0 index.html
+          printf "\\n"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
