@@ -366,7 +366,7 @@ index.html
    │
    ▼
 Static Website
-
+```
 
 ---
 
