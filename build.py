@@ -828,6 +828,12 @@ SCENARIOS = [
 # BUILD
 # ============================================================
 
+EXCUSES = [item["excuse"].strip() for item in SCENARIOS]
+if any(not excuse for excuse in EXCUSES):
+    raise ValueError("Every scenario must have a non-empty excuse.")
+if len(EXCUSES) != len(set(EXCUSES)):
+    raise ValueError("Duplicate excuses found. Every scenario needs a unique excuse.")
+
 DATA = json.dumps(SCENARIOS, ensure_ascii=False)
 
 HTML = r'''<!DOCTYPE html>
@@ -946,29 +952,12 @@ HTML = r'''<!DOCTYPE html>
     }
 
     .logo {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
+        display: block;
         width: 74px;
         height: 74px;
-
-        border-radius: 22px;
-
-        font-size: 36px;
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(126, 99, 255, 0.24),
-                rgba(0, 220, 255, 0.13)
-            );
-
-        border: 1px solid rgba(255,255,255,0.10);
-
-        box-shadow:
-            0 15px 50px rgba(0,0,0,0.30),
-            inset 0 1px rgba(255,255,255,0.08);
+        margin: 0 auto;
+        object-fit: contain;
+        filter: drop-shadow(0 15px 24px rgba(0,0,0,0.34));
     }
 
     h1 {
@@ -1775,9 +1764,13 @@ HTML = r'''<!DOCTYPE html>
 
     <header>
 
-        <div class="logo" aria-hidden="true">
-            🧑‍💻
-        </div>
+        <img
+            class="logo"
+            src="./favicon.svg"
+            alt="Programmer Error Generator logo"
+            width="74"
+            height="74"
+        >
 
         <h1>Programmer Error Generator</h1>
 
@@ -2132,6 +2125,9 @@ HTML = r'''<!DOCTYPE html>
 
     let lastRandomIndex = -1;
 
+    // Cycle through every scenario before repeating any excuse.
+    let randomHistory = new Set();
+
     let toastTimer = null;
 
 
@@ -2227,21 +2223,22 @@ HTML = r'''<!DOCTYPE html>
         }
 
 
-        let index;
+        let availableIndices = SCENARIOS
+            .map((_, scenarioIndex) => scenarioIndex)
+            .filter(scenarioIndex => !randomHistory.has(scenarioIndex));
 
-        do {
+        if (!availableIndices.length) {
+            randomHistory.clear();
+            availableIndices = SCENARIOS
+                .map((_, scenarioIndex) => scenarioIndex)
+                .filter(scenarioIndex => scenarioIndex !== lastRandomIndex);
+        }
 
-            index =
-                Math.floor(
-                    Math.random() *
-                    SCENARIOS.length
-                );
+        const index = availableIndices[
+            Math.floor(Math.random() * availableIndices.length)
+        ];
 
-        } while (
-            index === lastRandomIndex
-        );
-
-
+        randomHistory.add(index);
         lastRandomIndex = index;
 
         displayScenario(index);
