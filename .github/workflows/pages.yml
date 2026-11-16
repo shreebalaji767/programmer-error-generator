@@ -46,6 +46,7 @@ jobs:
           required = [
               "<!DOCTYPE html>",
               "<title>",
+              "href=\"./favicon.svg\"",
               "Programmer Error Generator",
               'id="searchInput"',
               'id="generateButton"',
@@ -78,6 +79,7 @@ jobs:
           PY
           mkdir -p dist
           cp index.html dist/index.html
+          cp favicon.svg dist/favicon.svg
           touch dist/.nojekyll
           test -s dist/index.html
 
