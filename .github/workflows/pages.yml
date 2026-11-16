@@ -47,6 +47,8 @@ jobs:
               "<!DOCTYPE html>",
               "<title>",
               "href=\"./favicon.svg\"",
+              "src=\"./favicon.svg\"",
+              "randomHistory",
               "Programmer Error Generator",
               'id="searchInput"',
               'id="generateButton"',
